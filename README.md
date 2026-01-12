@@ -1,79 +1,24 @@
-# Toria Tise | Portfolio Website
+# 鳥或チセ / Toria Tise
 
-イラストレーター「鳥或チセ (Toria Tise)」のポートフォリオサイト。
-React + TypeScript + Vite で構築され、モダンで高品質な Web 体験を提供します。
+イラストレーター「鳥或チセ」の公式ポートフォリオサイトのリポジトリです。
+This is the repository for the official portfolio site of Toria Tise.
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
+**[🌐 公式サイト / Official Website](https://C-Tutu.github.io/Tise-hp/)**
 
-**[ライブデモを見る (GitHub Pages)](https://C-Tutu.github.io/Tise-hp/)**
+---
 
-![Site Preview](./public/icon.png)
+## 🎨 About
 
-## ✨ 特徴
+**鳥或チセ (Toria Tise)**
+High School Student / Illustrator
 
--   **没入感のあるデザイン**: 視差効果と洗練されたアニメーション
--   **レスポンシブ対応**: PC、タブレット、スマートフォンに最適化
--   **高速なパフォーマンス**: Vite による最適化されたビルド
--   **画像プレビュー機能**: 作品をクリックして拡大表示できるライトボックス機能
+-   **お仕事の依頼**: DM にて受け付けております。
+-   **Love**: Arknights, Vocaloid
 
-## 🛠 技術スタック
+## 🔗 Social Media
 
--   **Framework**: React 19
--   **Language**: TypeScript
--   **Build Tool**: Vite
--   **Styling**: Modern CSS3 (CSS Variables, Animations, Glassmorphism)
--   **Deployment**: GitHub Pages
+イラストの投稿や最新情報は主に SNS で発信しています。
+Please follow me on social media for my latest artworks.
 
-## 🚀 開発環境のセットアップ
-
-```bash
-# クローン
-git clone https://github.com/C-Tutu/Tise-hp.git
-cd Tise-hp
-
-# 依存関係のインストール
-npm install
-
-# 開発サーバーの起動
-npm run dev
-```
-
-## 📦 デプロイ方法
-
-このプロジェクトは GitHub Pages への自動デプロイ設定が含まれています。
-
-1. 変更をコミットしてプッシュ
-
-    ```bash
-    git add .
-    git commit -m "Update site content"
-    git push
-    ```
-
-2. デプロイスクリプトを実行
-    ```bash
-    npm run deploy
-    ```
-
-## 📂 ディレクトリ構成
-
-```
-src/
-├── assets/         # 画像などの静的リソース
-├── components/     # UIコンポーネント
-│   ├── FloatingNav.tsx  # SNSリンクナビゲーション
-│   ├── ImageModal.tsx   # 画像プレビューモーダル
-│   ├── MainVisual.tsx   # メインのヒーローセクション
-│   ├── Profile.tsx      # プロフィール情報
-│   └── Showcase.tsx     # 作品ギャラリー
-├── constants/      # 定数ファイル (DRY原則)
-│   └── index.ts
-├── App.tsx         # メインアプリケーションコンポーネント
-└── index.css       # グローバルスタイル・変数
-```
-
-## 📝 ライセンス
-
-This project is licensed under the MIT License.
-&copy; 2026 Toria Tise. All Rights Reserved.
+-   **[X (Twitter) - @tise_toria](https://x.com/tise_toria)**
+-   **[BlueSky - @tise-toria.bsky.social](https://bsky.app/profile/tise-toria.bsky.social)**
