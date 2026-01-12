@@ -1,0 +1,100 @@
+/* Showcaseセクション - シンプルなギャラリーレイアウト */
+.showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px; /* 行間40px、列間60px */
+    padding: 0 80px 120px 80px; /* 左右にパディング追加 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.art-piece {
+    position: relative;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.art-piece:hover {
+    transform: translateY(-5px);
+}
+
+/* Featured: 横長メイン作品 - 2列使用 */
+.art-piece.featured {
+    grid-column: span 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sketch: 縦長スケッチ - 1列 */
+.art-piece.sketch {
+    grid-column: span 1;
+}
+
+/* WIP: 作業中作品 - 1列 */
+.art-piece.wip {
+    grid-column: span 1;
+}
+
+/* Calligraphy: 書道作品（縦長） */
+.art-piece.calligraphy {
+    grid-column: span 1;
+    max-width: 180px;
+    justify-self: center;
+}
+
+.art-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.art-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.art-piece:hover .art-image-wrapper {
+    box-shadow: 0 12px 40px rgba(0, 188, 212, 0.12);
+}
+
+.art-piece:hover .art-image-wrapper img {
+    transform: scale(1.02);
+}
+
+/* 作品タイトル */
+.art-title {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .showcase {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .art-piece.featured,
+    .art-piece.sketch,
+    .art-piece.wip,
+    .art-piece.calligraphy {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .art-piece.calligraphy {
+        max-width: 200px;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+    /* Light Theme Colors */
+    --c-primary: #00bcd4; /* Vibrant Cyan for contrast */
+    --c-accent: #84fffc; /* The original character color, used for soft glows */
+    --c-bg: #ffffff;
+    --c-text: #333333;
+    --c-text-light: #777777;
+    --c-surface: #ffffff;
+    --section-spacing: 120px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: var(--c-bg);
+    /* Enhanced Atmospheric Gradient: White to Clear Cyan */
+    background: radial-gradient(
+        circle at 50% 0%,
+        #f0fcff 0%,
+        #e0f7fa 40%,
+        #ffffff 80%
+    );
+    background-attachment: fixed;
+    color: var(--c-text);
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--c-text);
+}
+
+a {
+    color: var(--c-text);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar styling for Webkit */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}

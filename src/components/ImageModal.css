@@ -1,0 +1,102 @@
+/* 画像モーダル - オーバーレイ */
+.image-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modalFadeIn 0.2s ease-out;
+    cursor: pointer;
+}
+
+.image-modal-overlay.closing {
+    animation: modalFadeOut 0.2s ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* モーダルコンテンツ */
+.image-modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    animation: modalZoomIn 0.2s ease-out;
+    cursor: default;
+}
+
+.image-modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal-overlay.closing .image-modal-content {
+    animation: modalZoomOut 0.2s ease-out forwards;
+}
+
+@keyframes modalZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalZoomOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+/* 閉じるボタン */
+.modal-close-btn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7;
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
