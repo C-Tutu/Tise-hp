@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Toria Tise | Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+イラストレーター「鳥或チセ (Toria Tise)」のポートフォリオサイト。
+React + TypeScript + Vite で構築され、モダンで高品質な Web 体験を提供します。
 
-Currently, two official plugins are available:
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[ライブデモを見る (GitHub Pages)](https://C-Tutu.github.io/Tise-hp/)**
 
-## React Compiler
+![Site Preview](./public/icon.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ 特徴
 
-## Expanding the ESLint configuration
+-   **没入感のあるデザイン**: 視差効果と洗練されたアニメーション
+-   **レスポンシブ対応**: PC、タブレット、スマートフォンに最適化
+-   **高速なパフォーマンス**: Vite による最適化されたビルド
+-   **画像プレビュー機能**: 作品をクリックして拡大表示できるライトボックス機能
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 技術スタック
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   **Framework**: React 19
+-   **Language**: TypeScript
+-   **Build Tool**: Vite
+-   **Styling**: Modern CSS3 (CSS Variables, Animations, Glassmorphism)
+-   **Deployment**: GitHub Pages
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 開発環境のセットアップ
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# クローン
+git clone https://github.com/C-Tutu/Tise-hp.git
+cd Tise-hp
+
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 デプロイ方法
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+このプロジェクトは GitHub Pages への自動デプロイ設定が含まれています。
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. 変更をコミットしてプッシュ
+
+    ```bash
+    git add .
+    git commit -m "Update site content"
+    git push
+    ```
+
+2. デプロイスクリプトを実行
+    ```bash
+    npm run deploy
+    ```
+
+## 📂 ディレクトリ構成
+
 ```
+src/
+├── assets/         # 画像などの静的リソース
+├── components/     # UIコンポーネント
+│   ├── FloatingNav.tsx  # SNSリンクナビゲーション
+│   ├── ImageModal.tsx   # 画像プレビューモーダル
+│   ├── MainVisual.tsx   # メインのヒーローセクション
+│   ├── Profile.tsx      # プロフィール情報
+│   └── Showcase.tsx     # 作品ギャラリー
+├── constants/      # 定数ファイル (DRY原則)
+│   └── index.ts
+├── App.tsx         # メインアプリケーションコンポーネント
+└── index.css       # グローバルスタイル・変数
+```
+
+## 📝 ライセンス
+
+This project is licensed under the MIT License.
+&copy; 2026 Toria Tise. All Rights Reserved.
