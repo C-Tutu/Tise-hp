@@ -12,7 +12,7 @@ This is the repository for the official portfolio site of Toria Tise.
 **鳥或チセ (Toria Tise)**
 High School Student / Illustrator
 
--   **お仕事の依頼**: DM にて受け付けております。
+-   **お仕事の依頼**: 現在活動停止中
 -   **Love**: Arknights, Vocaloid
 
 ## 🔗 Social Media
